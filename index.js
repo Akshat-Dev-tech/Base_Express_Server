@@ -19,6 +19,11 @@ app.get('/about', (req, res) => {  res.send('This is the About page. Here you ca
 );
 
 
+app.get('/getjson', (req, res) => { res.json({ 
+    message: 'This is a JSON response from the server.',
+    message2: 'This is another message in JSON format.' }); }
+);
+
 //listening to the server on PORT 3000
 app.listen(process.env.PORT, () => {
     console.log(`Server is running on http://localhost:${process.env.PORT}`);
